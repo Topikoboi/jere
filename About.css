@@ -1,0 +1,289 @@
+/* Global Styles */
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #c3cfe2;
+  color: #333;
+  -webkit-user-select: none; /* Chrome, Safari, Opera */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* Internet Explorer/Edge */
+  user-select: none;         /* Non-prefixed version */
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: #c3cfe2;
+  border-radius: 20px; /* Melengkung di semua sudut */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Bayangan */
+  margin-top: 20px; /* Ruang di bagian atas */
+  width: 90%; /* Lebar navbar */
+  position: relative; /* Tetap di bagian atas */
+  z-index: 1000; /* Agar di atas elemen lain */
+  margin-left: auto; /* Tengah di layar */
+  margin-right: auto; /* Tengah di layar */
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  margin-left: 10px; /* Pindahkan logo ke kanan */
+}
+
+.navbar-nav {
+  display: flex;
+  margin-left: auto; /* Pindahkan menu navigasi ke kiri */
+  margin-right: 10px; /* Tambahkan margin kanan untuk navigasi */
+}
+
+.navbar-nav a {
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.navbar-nav a:hover {
+  color: #007bff;
+  transition: 0.3s;
+  transform: scale(1.1); /* Membesarkan sedikit saat dihover */
+}
+
+/* Container utama */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Membuat container setinggi layar */
+  padding-top: 80px; /* Memberikan ruang untuk navbar */
+}
+
+/* Form Container */
+.contact-container {
+  background: linear-gradient(to bottom, #FFFFFF, #c3cfe2); /* Efek fade ke warna background utama */
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: auto; /* Form berada di tengah */
+  margin-top: 32px;
+  margin-bottom: 60px;
+}
+
+.contact-title {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.contact-title h2 {
+  margin: 0;
+  font-size: 28px;
+  color: #333;
+}
+
+.contact-title p {
+  margin: 5px 0 20px;
+  color: #777;
+}
+
+.contact-form .form-group {
+  margin-bottom: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  font-size: 16px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #333;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #555;
+}
+
+/* Notifikasi dasar */
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4CAF50; /* Warna hijau untuk keberhasilan */
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  z-index: 1000; /* Agar notifikasi berada di atas konten lain */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+/* Menampilkan notifikasi */
+.notification.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Sembunyikan notifikasi */
+.notification.hidden {
+  display: none;
+}
+
+/* Warna untuk notifikasi gagal */
+.notification.error {
+  background-color: #f44336; /* Warna merah untuk kesalahan */
+}
+
+/* Footer Styling */
+footer {
+  background: #333537;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.social_icon {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.social_icon li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.social_icon li a {
+  color: white;
+  font-size: 24px;
+  transition: transform 0.3s;
+}
+
+.social_icon li a:hover {
+  transform: scale(1.2);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.menu li {
+  list-style: none;
+  margin: 0 15px;
+}
+
+.menu li a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.menu li a:hover {
+  color: #ffb3b3;
+}
+
+.footer-bottom {
+  margin-top: 20px;
+}
+
+.footer-bottom p {
+  margin: 5px 0;
+}
+
+.footer-bottom p a {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-bottom p a:hover {
+  color: #ffb3b3;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .social_icon, .menu {
+      flex-direction: row;
+      gap: 30px; /* Mengatur jarak antar ikon */
+  }
+
+  .social_icon a {
+      margin: 0 5px; /* Menambahkan margin di kiri dan kanan ikon */
+  }
+
+
+
+  .social_icon li, .menu li {
+      margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+      padding: 20px 0;
+  }
+
+  .footer-content {
+      padding: 0 10px;
+  }
+}
+
+.custom-shape-divider-bottom-1724130022 {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1724130022 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+}
+
+.custom-shape-divider-bottom-1724130022 .shape-fill {
+  fill: #333537;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1724130022 svg {
+      width: calc(151% + 1.3px);
+      height: 53px;
+  }
+}
